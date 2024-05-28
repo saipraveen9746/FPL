@@ -1,0 +1,20 @@
+<!-- players_list.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player List</title>
+</head>
+<body>
+    <h1>Player List</h1>
+    <ul>
+        {% for player in player_list %}
+            <li>{{ player.web_name }} {{ player.last_name }}</li>
+            <li>Team: {{ player.team }}</li>
+            <li>Position: {{ player.position }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

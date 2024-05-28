@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Team Details</h2>
+    <p>Team: {{ team.name }}</p>
+    <p>Budget: {{ team.budget }}</p>
+    <p>Total Points: {{ team.total_points }}</p>
+  
+    <h3>Players:</h3>
+    <ul>
+      {% for player_in_team in players_in_team %}
+        <li>{{ player_in_team.player.web_name }} </li>
+      {% endfor %}
+    </ul>
+</body>
+</html>

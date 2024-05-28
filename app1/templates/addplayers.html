@@ -1,0 +1,289 @@
+{% extends 'navbar.html'%} {% load static %} {% block content %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/addplayers.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/addplayers2.css' %}" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      function fetchPlayers(category) {
+        let heading ='';
+        if (category=='Goalkeeper'){
+          heading = 'Goalkeepers';
+        }else if (category=='Defender'){
+          heading = 'Defenders';
+        }else if (category=='Midfielder'){
+          heading = 'Midfielders';
+        }else if (category=='Forward'){
+          heading= 'Forwards'
+        }
+        $.ajax({
+          url: `/get_players/${category}/`,
+          type: 'GET',
+          
+          success: function(data) {
+            // Update the player list container with the fetched players
+            $('#player-list').empty(); // Clear previous content
+            $('#player-list').prev('div').text(heading);
+            let tableHeader =`
+            <table class='player-table'>
+              <colgroup>
+                <col style='width:10%'>
+                <col style='width:20%'>
+                <col style='width:15%'>
+                <col style='width:10%'>
+                <col style='width:10%'>
+              </colgroup> 
+              <thead>
+                <tr>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                  <th>Points</th>
+                  <th>Value</th>
+                </tr>
+              </thead>  
+              <tbody> `;
+              $('#player-list').append(tableHeader);
+            data.map(player => {
+              let listItem = ` <div class='list-image-container'>
+                                  <table>
+                                    <colgroup>
+                                      <col style='width:10%'>
+                                      <col style='width:20%'>
+                                      <col style='width:20%'>
+                                      <col style='width:10%'>
+                                      <col style='width:10%'>
+                                    </colgroup> 
+                                    <tr>
+                                      <td><img class='list-image' src="${player.photo}"  alt="${player.web_name}"/></td>
+                                      <td class='webname'>${player.web_name}</td>
+                                      <td class='teamname'>${player.team_name}</td>
+                                      <td class='points'>${player.total_points}</td>
+                                      <td class='value'>${player.value_season}</td>
+                                     </tr>
+                                  <table>
+
+       
+                              </div>`;
+              $('#player-list').append(listItem);
+            });
+          },
+          error: function(xhr, status, error) {
+            console.error('Error fetching players:', error);
+          }
+        });
+      }
+    </script>
+    
+  </head>
+  <body>
+  <div class="container">
+    <div class="green-box">    
+      <div class="gk-box">
+        <div class="player-image-1">
+          <img
+            class="player-image-gk"
+            src="{% static 'Images\jersey_blu_islanda_back.webp' %}"
+            alt="gk"
+          />
+          <div class="button-container">
+            <button onclick="fetchPlayers('Goalkeeper')" class="add-button" style="margin-left: 35px" >
+              Add GoalKeeper
+            </button>
+            <div class="half-circle"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="def-box">
+        <div class="defenders-container">
+          <div class="defenders">
+            <div class="player-image">
+              <img
+                class="player-image-df-1"
+                src="{% static 'Images\jersey_blu_islanda_back.webp' %}"
+                alt="defender"
+              />
+              <div class="button-container">
+                <button onclick="fetchPlayers('Defender')" class="add-button">Add Defender</button>
+              </div>
+            </div>
+          </div>
+          <div class="defenders">
+            <div class="player-image">
+              <img
+                class="player-image-df-2"
+                src="{% static 'Images\jersey_blu_islanda_back.webp' %}"
+                alt="defender"
+              />
+              <div class="button-container">
+                <button onclick="fetchPlayers('Defender')" class="add-button" style="margin-left: 70px">
+                  Add Defender
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="defenders">
+            <div class="player-image">
+              <img
+                class="player-image-df-3"
+                src="{% static 'Images\jersey_blu_islanda_back.webp' %}"
+                alt="defender"
+              />
+              <div class="button-container">
+                <button onclick="fetchPlayers('Defender')" class="add-button" style="margin-left: 70px">
+                  Add Defender
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="defenders">
+          <div class="player-image">
+            <img
+              class="player-image-df-4"
+              src="{% static 'Images\jersey_blu_islanda_back.webp' %}"
+              alt="defender"
+            />
+            <div class="button-container">
+              <button onclick="fetchPlayers('Defender')" class="add-button" style="margin-left: 70px">
+                Add Defender
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="midfielders-container">
+        <div class="mid-fielders">
+          <div class="player-image">
+            <img
+              class="player-image-mid-1"
+              src="{% static 'Images\jersey_blu_islanda_back.webp' %}"
+              alt="midfielder"
+            />
+            <div class="button-container">
+              <button onclick="fetchPlayers('Midfielder')"
+                class="add-button"
+                style="margin-left: 90px"
+              >
+                Add Midfielder
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="mid-fielders">
+          <div class="player-image">
+            <img
+              class="player-image-mid-2"
+              src="{% static 'Images\jersey_blu_islanda_back.webp' %}"
+              alt="midfielder"
+            />
+            <div class="button-container">
+              <button onclick="fetchPlayers('Midfielder')"
+                class="add-button"
+                style="margin-left: 90px"
+              >
+                Add Midfielder
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="mid-fielders">
+          <div class="player-image">
+            <img
+              class="player-image-mid-3"
+              src="{% static 'Images\jersey_blu_islanda_back.webp' %}"
+              alt="midfielder"
+            />
+            <div onclick="fetchPlayers('Midfielder')" class="button-container">
+              <button
+                class="add-button"
+                style="margin-left: 90px"
+              >
+                Add Midfielder
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="forward-container">
+        <div class="forward">
+          <div class="player-image">
+            <img
+              class="player-image-fw-1"
+              src="{% static 'Images\jersey_blu_islanda_back.webp' %}"
+              alt="forward"
+            />
+            <div class="button-container">
+              <button
+                onclick="fetchPlayers('Forward')"
+                class="add-button"
+                style="margin-left: 90px"
+              >
+                Add Forward
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="forward">
+          <div class="player-image">
+            <img
+              class="player-image-fw-2"
+              src="{% static 'Images\jersey_blu_islanda_back.webp' %}"
+              alt="forward"
+            />
+            <div class="button-container">
+              <button
+                onclick="fetchPlayers('Forward')"
+                class="add-button"
+                style="margin-left: 90px"
+              >
+                Add Forward
+              </button>
+            </div>
+            <div class="circle"></div>
+          </div>
+        </div>
+
+        <div class="forward">
+          <div class="player-image">
+            <img
+              class="player-image-fw-3"
+              src="{% static 'Images\jersey_blu_islanda_back.webp' %}"
+              alt="forward"
+            />
+            <div class="button-container">
+              <button
+                onclick="fetchPlayers('Forward')"
+                class="add-button"
+                style="margin-left: 90px"
+              >
+                Add Forward
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="player-list" >
+    
+      <div class="heading-player-list">{{ heading }}</div>
+   
+
+      <ul id="player-list"></ul>
+    </div>
+ 
+  </div>
+  </div>
+
+
+  </body>
+</html>
+{% endblock content %}

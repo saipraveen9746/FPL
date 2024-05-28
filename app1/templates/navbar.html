@@ -1,0 +1,144 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@800&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+    
+</head>
+<body>
+  
+    
+    <div>
+        <header className='Header'>
+          <div className='image-row' style=" display: flex;
+          justify-content: space-between;
+          align-items: center;
+          /* max-height: auto; */
+          /* max-width: 20px; */
+          height: 50px;
+      ">
+            <div class='Image'><a href='https://www.manutd.com/?utm_source=premier-league-website&utm_campaign=website&utm_medium=link'><img src="{% static 'Images/clubs/t1.svg' %}" alt=''   width='50px'/></a></div>
+            <div class='Image'><a href='https://www.arsenal.com/?utm_source=premier-league-website&utm_campaign=website&utm_medium=link/'><img src="{% static 'Images/clubs/t3.svg' %}" alt='' width='50px' /></a></div>
+            <div class='Image'><a href='https://www.nufc.co.uk/?utm_source=premier-league-website&utm_campaign=website&utm_medium=link'><img src="{% static 'Images/clubs/t4.svg' %}" alt='' width='50px'/></a></div>
+            <div class='Image'><a href='https://www.tottenhamhotspur.com/?utm_source=premier-league-website&utm_campaign=website&utm_medium=link'><img src="{% static 'Images/clubs/t6.svg' %}" alt=''width='50px'/></a></div>
+            <div class='Image'><a href='https://www.avfc.co.uk/?utm_source=premier-league-website&utm_campaign=website&utm_medium=link'><img src="{% static 'Images/clubs/t7.svg' %}" alt='' width='50px' /></a></div>
+            <div class='Image'><a href='https://www.chelseafc.com/en??utm_source=premier-league-website&utm_campaign=website&utm_medium=link'><img src= "{%static 'Images/clubs/t8.svg' %}" alt=''width='50px'/></a></div>
+            <div class='Image'><a href='https://www.evertonfc.com/?utm_source=premier-league-website&utm_campaign=website&utm_medium=link'><img src="{% static 'Images/clubs/t11.svg' %}"  alt=''width='50px'/></a></div>
+            <div class='Image'><a href='https://www.liverpoolfc.com/?utm_source=premier-league-website&utm_campaign=website&utm_medium=link'><img src=" {% static  'Images/clubs/t14.svg' %}"  alt=''width='50px'/></a></div>
+            <div class='Image'><a href='https://www.nottinghamforest.co.uk/?utm_source=premier-league-website&utm_campaign=website&utm_medium=link'><img src=" {% static 'Images/clubs/t17.svg' %} " alt=''width='50px'/></a></div>
+            <div class='Image'><a href='https://www.whufc.com/?utm_source=premier-league-website&utm_campaign=website&utm_medium=link'><img src=" {% static 'Images/clubs/t21.svg' %}"  alt=''width='50px'/></a></div>
+            <div class='Image'><a href='https://www.cpfc.co.uk/?utm_source=premier-league-website&utm_campaign=website&utm_medium=link'><img src=" {% static 'Images/clubs/t31.svg'%}"  alt=''width='50px'/></a></div>
+            <div class='Image'><a href='https://www.brightonandhovealbion.com/?utm_source=premier-league-website&utm_campaign=website&utm_medium=link'><img src=" {% static 'Images/clubs/t36.svg' %} " alt=''width='50px'/></a></div>
+            <div class='Image'><a href='https://www.wolves.co.uk/?utm_source=premier-league-website&utm_campaign=website&utm_medium=link'><img src=" {% static  'Images/clubs/t39.svg' %}"  alt=''width='50px'/></a></div>
+            <div class='Image'><a href='https://www.mancity.com/?utm_source=premier-league-website&utm_campaign=website&utm_medium=link'><img src= " {% static 'Images/clubs/t43.svg' %}"  alt=''width='50px'/></a></div>
+            <div class='Image'><a href='https://www.sufc.co.uk/?utm_source=premier-league-website&utm_campaign=website&utm_medium=link'><img src=" {% static 'Images/clubs/t49.svg' %}"  alt=''width='50px'/></a></div>
+            <div class='Image'><a href='https://www.fulhamfc.com/?utm_source=premier-league-website&utm_campaign=website&utm_medium=link'><img src=" {% static 'Images/clubs/t54.svg' %}"  alt=''width='50px'/></a></div>
+            <div class='Image'><a href='https://www.burnleyfootballclub.com/?utm_source=premier-league-website&utm_campaign=website&utm_medium=link'><img src=" {% static 'Images/clubs/t90.svg' %}"  alt=''width='50px'/></a></div>
+            <div class='Image'><a href='https://www.afcb.co.uk/?utm_source=premier-league-website&utm_campaign=website&utm_medium=link'><img src=" {% static 'Images/clubs/t91.svg' %}"  alt=''width='50px'/></a></div>
+            <div class='Image'><a href='https://www.brentfordfc.com/en??utm_source=premier-league-website&utm_campaign=website&utm_medium=link'><img src=" {% static 'Images/clubs/t94.svg' %}"  alt=''width='50px'/></a></div>
+            <div class='Image'><a href='https://www.lutontown.co.uk/?utm_source=premier-league-website&utm_campaign=website&utm_medium=link'><img src=" {% static 'Images/clubs/t102.svg' %}"  alt=''width='50px'/></a></div>
+            
+          </div>  
+        </header>
+        </div>
+    <nav class="navbar">
+        <div className="nav-left" style="display: flex;">
+          <a href="/" className="logocontainer" style="position: relative;">
+            <img alt="premiere league logo" className="pl-header-logo" style="height: 100px; 
+            position: absolute; 
+            /* left: 75%;  */
+            transform: translateX(-50%); 
+            top:5px; " src="https://www.premierleague.com/resources/rebrand/v7.129.2/i/elements/pl-main-logo.png"/>
+          </a>  
+          <ul className="nav-text-1" style="padding-bottom: 0px;
+          margin-bottom: 0;
+          "><li><a href="/" className="Fpl-text" style="padding-left: 0px;
+            text-decoration: none;
+            color: aqua;
+            font-size: 50px;
+            font-family:'Mulish', sans-serif;">Fantasy</a></li></ul>
+        </div>
+        <div className="nav-right" style="margin-right: 40px;">
+          <ul className="navtext-2" style=" list-style-type: none;
+          display: flex;
+          padding-bottom: 0px;
+          margin-bottom: 0px;
+         ">
+         
+         <!-- {% if team.id %} -->
+         <li style=""><a href=""  className="text-1" style="color:white;
+                text-decoration: none;
+                font-size: 20px;
+                font-family: 'Mulish', sans-serif;
+                margin-left: 0px;"><b>Your team</b></a></li>
+          <!-- {% endif %} -->
+                
+              
+            <li style=""><a href="/" className="text-1" style="color:white;
+                text-decoration: none;
+                font-size: 20px;
+                font-family: 'Mulish', sans-serif;
+                margin-left: 0px;"><b>Home</b></a></li>
+            <li style=""><a href="{% url 'player-list' %}" class="text" style="   padding-left:30px ;
+                color: white;
+                text-decoration: none;
+                font-size: 20px;
+                font-family: 'Mulish', sans-serif;
+                padding-top: 200px;
+                margin-left: 0px;"><b>Players</b></a></li>
+            <li style=""><a href="{% url 'top-rated'%}" class="text" style="   padding-left:30px ;
+                color: white;
+                text-decoration: none;
+                font-size: 20px;
+                font-family: 'Mulish', sans-serif;
+                padding-top: 200px;
+                margin-left: 0px;"><b>Top Players</b></a></li>
+            <li style=""><a href="" class="text" style="   padding-left:30px ;
+              color: white;
+              text-decoration: none;
+              font-size: 20px;
+              font-family: 'Mulish', sans-serif;
+              padding-top: 200px;
+              margin-left: 0px;"><b>Your team</b></a></li>
+            <li style=""><a href="{% url 'createyourteam' %}" class="text" style="   padding-left:30px ;
+              color: white;
+              text-decoration: none;
+              font-size: 20px;
+              font-family: 'Mulish', sans-serif;
+              padding-top: 200px;
+              margin-left: 0px;"><b>Create your team</b></a></li>
+          
+            
+              <select class="btn-1" onchange="window.location.href=this.value;" >
+                {% if user.is_authenticated %}
+                <option value="" selected disabled><b>{{ user }}</b></option>
+                <option value="{% url 'logout' %}"><b>Sign-out</b></option>
+                {% else %}
+                <option value="{% url 'social:begin' 'google-oauth2' %}?next={{ request.path }}" selected disabled><b>Sign-in</b></option>
+                
+                <option value="{% url 'social:begin' 'google-oauth2' %}?next={{ request.path }}"><b>Sign-in</b></option>
+                {% endif %}
+</select>
+              
+      
+            </li>    
+          </ul>
+        </div>
+      </nav>
+      {% block content %}
+      {% endblock content %}
+</body>
+</html>

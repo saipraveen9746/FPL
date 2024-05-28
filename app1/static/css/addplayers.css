@@ -1,0 +1,214 @@
+.green-box {
+  width: 700px;
+  height: 800px;
+  background-color: rgb(1 186 92);
+  margin: 40px;
+  padding: 0px;
+  border: 1px solid #f7fbf9;
+  padding-top: 0;
+  position: relative;
+  float: left;
+  width: 60%;
+}
+
+.player-image-gk {
+  width: 75px;
+  height: 80px;
+  margin-left: 220px;
+  
+}
+
+.player-image-df-1 {
+  width: 75px;
+  height: 80px;
+  padding-left: 15px;
+ 
+}
+.view-player-button-df-1 {
+  margin-top: 50px;
+}
+
+.player-image-df-2 {
+  width: 75px;
+  height: 80px;
+  padding-left: 90px;
+}
+
+.player-image-df-3 {
+  width: 75px;
+  height: 80px;
+  padding-left: 90px;
+  padding-right: 0px;
+}
+
+.player-image-df-4 {
+
+  width: 75px;
+  height: 80px;
+  padding-left: 90px;
+}
+
+.defenders {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.player-image-mid-1 {
+  width: 75px;
+  height: 80px;
+  padding-left: 110px;
+}
+
+.player-image-mid-2 {
+  width: 75px;
+  height: 80px;
+  padding-left: 90px;
+}
+
+.player-image-mid-3 {
+  width: 75px;
+  height: 80px;
+  padding-left: 90px;
+}
+
+.mid-fielders {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.player-image-fw-1 {
+  width: 75px;
+  height: 80px;
+  padding-left: 110px;
+}
+
+.player-image-fw-2 {
+  width: 75px;
+  height: 80px;
+  padding-left: 90px;
+  position: relative;
+  z-index: 1;
+ 
+  
+}
+
+.player-image-fw-3 {
+  width: 75px;
+  height: 80px;
+  padding-left: 90px;
+}
+
+.forward {
+  display: inline-block;
+  margin: 10px;
+}
+
+/* .defenders-container {
+  margin-top: ;
+} */
+
+
+.button-container {
+  text-align: center; /* Center the button horizontally */
+  margin-top: 10px; /* Add some space between the image and the button */
+ position: relative;
+ z-index: 1;
+}
+
+
+
+.gk-box{
+  position: relative;
+  height: 120px;
+  width: 500px;
+  margin-left: 98px;
+  border-width: 3px 3px 3px 3px;
+  border-color: #01ba5c #fff #fff #fff;
+  border-style: solid;
+
+}
+
+
+.half-circle {
+  position: absolute;
+  width: 150px; /* adjust the width as needed */
+  height: 50px; /* half of the width to create a semi-circle */
+  border-radius: 0 0 100px 100px ; 
+  margin-left: 180px;
+  margin-top: 5px;
+  border-width: 3px 3px 3px 3px;
+  border-color:transparent white white white;
+  border-style: solid;
+}
+
+.def-box{
+ 
+ 
+  display: flex; /* Add flex display */
+  justify-content: center; /* Center the defenders horizontally */
+  align-items: center; /* Center the defenders vertically */
+  margin-top: 70px;
+  background-color: rgb(0 174 85);
+}
+
+.midfielders-container {
+  margin-top: 40px;
+  background-color: rgb(0 174 85) ;
+}
+
+.forward-container {
+  position: relative;
+  margin-top: 40px;
+  background-color: rgb(0 174 85);
+  border-width: 2px 2px 3px 2px;
+  border-color:rgb(0 174 85) rgb(0 174 85)  white rgb(0 174 85);
+  border-style: solid;
+}
+
+
+.circle {
+  position: absolute;
+  top: 50px; 
+  left: 50%; 
+  transform: translateX(-50%);
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 3px solid white; 
+  
+}
+
+.add-button{
+  background-image: linear-gradient(to right, rgb(0, 255, 135), rgb(2, 239, 255));
+  border: none;
+  border-radius: 2px;
+}
+
+.player-list {
+
+  position: absolute;
+  top: 0;
+  right: -20px;
+  width: 40%;
+  margin-left: 10px;
+  
+
+
+}
+.container{
+  position: relative;
+}
+.heading-player-list{
+  border-color: rgb(55, 0, 60);
+  border-style: solid;
+  border-width: 1px;
+  padding-right: 0;
+  width: 90px;
+  margin-left: 40px;
+  background-color: rgb(55, 0, 60);
+  font-family: "PremierSans-Bold", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  color:  rgb(2, 239, 255);
+  margin-top: 40px;
+ 
+}
+

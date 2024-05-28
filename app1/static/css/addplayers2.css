@@ -1,0 +1,61 @@
+
+
+.list-image{
+    width: 40px;
+
+}
+
+.list-image-container{
+    background-color: rgb(255, 255, 255);
+
+    
+}
+.webname {
+    color: rgb(6, 6, 39) ;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 550;
+    
+    }
+.teamname{
+    color: (6, 6, 39);
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 520;
+
+}
+.points{
+    color: (6, 6, 39);
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 520;
+ 
+}
+.value{
+    color: (6,6,39);
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 520;
+    
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+ 
+}
+
+td {
+
+    border: 1px solid #ddd;
+}
+.list-image-container {
+    width: 100%;
+}
+
+.player-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.player-table td {
+    box-sizing: border-box;
+    text-align: center;
+}

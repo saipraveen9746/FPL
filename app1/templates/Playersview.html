@@ -1,0 +1,62 @@
+{% extends 'navbar.html'%}
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/playervie.css' %}">
+</head>
+<body>
+    
+
+    
+
+    
+
+    <table class="player-table">
+        <thead>
+            <tr>
+                <th>Photo</th>
+                <th>Name</th>
+                <th>Team</th>
+                <th>Goals</th>
+                <th>Assists</th>
+                <th>Clean sheets</th>
+                <th>Points won</th>
+                <th>Value</th>
+
+                <!-- Add other column headers as needed -->
+            </tr>
+        </thead>
+        
+        <tbody>
+            {% for each in object_list %}
+            <tr>
+                <td><img src="{{each.photo}}" alt="" class="player-photo"></td>
+                <td>{{ each.web_name }}</td>
+                <td>{{ each.team_name }}</td>
+                <td>{{ each.goals_scored}}</td>
+                <td>{{ each.assists}}</td>
+                <td>{{ each.clean_sheets}}</td>
+                <td>{{ each.total_points}}</td>
+                <td>{{ each.value_season}}</td>
+
+                <!-- Add other player information as needed -->
+            </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+    
+    </body>
+    </html>
+    
+    
+
+
+</body>
+</html>
+{% endblock content %}
